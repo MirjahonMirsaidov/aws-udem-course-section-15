@@ -190,3 +190,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'userprofile.UserProfile'
 
 EMAIL_VERIFICATION_TOKEN_LIFETIME = timedelta(hours=1)
+
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID', str)
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY', str)
