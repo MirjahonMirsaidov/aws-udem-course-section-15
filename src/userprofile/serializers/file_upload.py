@@ -24,3 +24,13 @@ class FileUploadSerializer(serializers.ModelSerializer):
         instance = FileUpload.objects.create(file_path=file_path, **validated_data)
         return instance
 
+
+class FileListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FileUpload
+        fields = (
+            "id",
+            "file_path",
+            "description",
+        )
+
