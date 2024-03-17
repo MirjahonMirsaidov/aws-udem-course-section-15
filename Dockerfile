@@ -16,4 +16,4 @@ WORKDIR /code/src
 EXPOSE 80
 
 ENTRYPOINT ["sh", "-c", "python manage.py migrate && \
-                         python manage.py runserver -b 0.0.0.0 -p 80"]
+                         python manage.py runserver 80"]
