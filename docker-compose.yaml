@@ -2,7 +2,7 @@ version: '3'
 
 services:
   myapp:
-    build: .
+    image: public.ecr.aws/q0p4g0i1/file_service
     volumes:
       - .:/code
     ports:

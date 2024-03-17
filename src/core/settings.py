@@ -25,7 +25,7 @@ Env.read_env()
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY', str)
+SECRET_KEY = "django-insecure-ta3wu5!x&10-054&f!oy!t94w7h^2bnn@2uog*cb&8*jdq$=p4"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -102,14 +102,21 @@ ASGI_APPLICATION = 'core.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': env('DB_NAME', str),
+#         'USER': env('DB_USER', str),
+#         'PASSWORD': env('DB_PASSWORD', str),
+#         'HOST': env('DB_HOST', str),
+#         'PORT': env('DB_PORT', str),
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('DB_NAME', str),
-        'USER': env('DB_USER', str),
-        'PASSWORD': env('DB_PASSWORD', str),
-        'HOST': env('DB_HOST', str),
-        'PORT': env('DB_PORT', str),
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "wr_test",
     }
 }
 

@@ -13,6 +13,7 @@ RUN pip install -r requirements.txt
 ADD . /code/
 WORKDIR /code/src
 
+EXPOSE 80
+
 ENTRYPOINT ["sh", "-c", "python manage.py migrate && \
-                         python manage.py createcachetable && \
                          daphne -b 0.0.0.0 -p 80 core.asgi:application"]
