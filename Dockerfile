@@ -16,4 +16,4 @@ WORKDIR /code/src
 EXPOSE 80
 
 ENTRYPOINT ["sh", "-c", "python manage.py migrate && \
-                         daphne -b 0.0.0.0 -p 80 core.asgi:application"]
+                         python manage.py runserver -b 0.0.0.0 -p 80"]
